@@ -16,6 +16,7 @@ module.exports =
     std:
       "c++": "c++03"
       "c": "c99"
+    assumeCPlusPlus: false
     preCompiledHeaders: {
       "c++":[
         "cassert",

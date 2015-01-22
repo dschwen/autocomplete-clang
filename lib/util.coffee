@@ -20,6 +20,10 @@ module.exports =
 
   getSourceScopeLang: (scopes, scopeDictionary=clangSourceScopeDictionary) ->
     lang = null
+
+    if atom.config.get "autocomplete-clang.assumeCPlusPlus"
+      return "c++"
+
     for scope in scopes
       if scope of scopeDictionary
         return scopeDictionary[scope]
